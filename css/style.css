@@ -1,0 +1,448 @@
+/* ===================================
+   VATHROS ORGANOSI
+   SeeMTA V4 Görög Maffia
+   Main Style
+=================================== */
+
+
+/* Alap beállítások */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+body {
+    background: #05070d;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* ===================================
+   NAVBAR
+=================================== */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(0, 140, 255, 0.3);
+
+}
+
+
+
+/* Logo */
+
+.logo {
+
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 3px;
+
+    color: white;
+
+}
+
+
+.logo span {
+
+    color: #008cff;
+
+}
+
+
+
+
+/* Menü */
+
+.nav-links {
+
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+}
+
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: #ddd;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+
+.nav-links a:hover,
+.nav-links .active {
+
+    color: #008cff;
+
+}
+
+
+
+/* ===================================
+   HERO SECTION
+=================================== */
+
+
+.hero {
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.9)
+    ),
+
+    url("../images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+
+.hero-content {
+
+    text-align: center;
+
+    max-width: 900px;
+
+    animation: fadeIn 1.5s ease;
+
+}
+
+
+
+
+.hero h1 {
+
+    font-size: 80px;
+
+    letter-spacing: 10px;
+
+    font-weight: 900;
+
+}
+
+
+.hero h1 span {
+
+    color: #008cff;
+
+}
+
+
+
+.hero p {
+
+    margin-top: 20px;
+
+    font-size: 25px;
+
+    color: #ddd;
+
+}
+
+
+
+.description {
+
+    font-size: 17px !important;
+
+    color: #aaa !important;
+
+    max-width: 600px;
+
+    margin: 30px auto !important;
+
+}
+
+
+
+/* ===================================
+   GOMBOK
+=================================== */
+
+
+.buttons {
+
+    margin-top: 40px;
+
+}
+
+
+.btn {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    margin: 10px;
+
+    border-radius: 5px;
+
+
+    background: #008cff;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+}
+
+
+
+.btn:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+
+    0 0 20px #008cff;
+
+}
+
+
+
+.btn.secondary {
+
+    background: transparent;
+
+    border:1px solid #008cff;
+
+}
+
+
+
+/* ===================================
+   KÁRTYÁK
+=================================== */
+
+
+.cards {
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:30px;
+
+
+    padding:80px 10%;
+
+
+}
+
+
+
+.card {
+
+    background:
+
+    rgba(255,255,255,0.05);
+
+
+    border:
+
+    1px solid rgba(0,140,255,0.25);
+
+
+    padding:35px;
+
+
+    border-radius:15px;
+
+
+    backdrop-filter:blur(10px);
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+.card:hover {
+
+
+    transform:translateY(-10px);
+
+
+    border-color:#008cff;
+
+
+    box-shadow:
+
+    0 0 25px rgba(0,140,255,0.3);
+
+
+}
+
+
+
+.card h2 {
+
+    margin-bottom:20px;
+
+    color:#008cff;
+
+}
+
+
+.card p {
+
+    color:#ccc;
+
+    line-height:1.6;
+
+}
+
+
+
+/* ===================================
+   FOOTER
+=================================== */
+
+
+footer {
+
+    text-align:center;
+
+    padding:25px;
+
+    background:#020307;
+
+    color:#777;
+
+}
+
+
+
+
+
+/* ===================================
+   ANIMÁCIÓK
+=================================== */
+
+
+@keyframes fadeIn {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+/* ===================================
+   MOBIL NÉZET
+=================================== */
+
+
+@media(max-width:1000px){
+
+
+    .navbar {
+
+        flex-direction:column;
+
+        padding:20px;
+
+    }
+
+
+    .nav-links {
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        margin-top:20px;
+
+    }
+
+
+
+    .hero h1 {
+
+        font-size:45px;
+
+        letter-spacing:5px;
+
+    }
+
+
+
+    .cards {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
